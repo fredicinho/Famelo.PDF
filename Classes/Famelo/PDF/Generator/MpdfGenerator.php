@@ -114,11 +114,11 @@ class MpdfGenerator implements PdfGeneratorInterface {
 	}
 
 	public function downloadPdf($content, $filename = NULL) {
-		$previousErrorReporting = error_reporting(0);
+		//$previousErrorReporting = error_reporting(0);
 		$pdf = $this->getMpdfInstance();
 		$pdf->WriteHTML($content);
 		$pdf->Output($filename, 'd');
-		error_reporting($previousErrorReporting);
+		//error_reporting($previousErrorReporting);
 	}
 
 	public function savePdf($content, $filename) {
